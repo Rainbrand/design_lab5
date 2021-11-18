@@ -23,6 +23,7 @@ jobs:
           java-version: ${{ matrix.java-version }}
       - run: yarn global add node-w3c-validator
       - run: yarn install --frozen-lockfile
+      - run: yarn build
       - run: yarn checkvalidate
       # Deploy
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
