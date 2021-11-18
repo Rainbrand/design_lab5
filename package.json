@@ -8,9 +8,12 @@
     "dev": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
     "test": "editorconfig-checker",
-    "checkvalidate": "editorconfig-checker && node-w3c-validator -i ./dist/*.html -f html -o ./reports/result.html -s"
+    "checkvalidate": "editorconfig-checker && node-w3c-validator -i ./dist/*.html -f html -o ./reports/result.html -s",
+    "serve": "serve"
   },
-  "dependencies": {},
+  "dependencies": {
+    "serve": "^13.0.2"
+  },
   "devDependencies": {
     "bulma": "^0.9.3",
     "clean-webpack-plugin": "^4.0.0",
