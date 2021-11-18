@@ -27,15 +27,6 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - uses: borales/actions-yarn@v2.3.0
-        with:
-          cmd: install --frozen-lockfile # will run `yarn install` command
-      - uses: borales/actions-yarn@v2.3.0
-        with:
-          cmd: global add node-w3c-validator
-      - uses: borales/actions-yarn@v2.3.0
-        with:
-          cmd: build # will run `yarn build` command
-      - uses: borales/actions-yarn@v2.3.0
-        with:
-          cmd: checkvalidate # will run `yarn test` command
+      - run: yarn global add node-w3c-validator
+      - run: yarn install --frozen-lockfile
+      - run: yarn checkvalidate
