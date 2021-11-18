@@ -1,0 +1,32 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ 12.x ]
+        java-version: [ 11 ]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - uses: actions/setup-java@v2.3.1
+        with:
+          distribution: 'temurin'
+          java-version: ${{ matrix.java-version }}
+      - run: npm i -G node-w3c-validator
+      - run: npm ci
+      - run: npm run checkvalidate
+      # Deploy
+      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "lab-5-site-design" #Must be unique in Heroku
+          heroku_email: ${{secrets.EMAIL}}
