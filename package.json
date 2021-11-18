@@ -6,7 +6,9 @@
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "test": "editorconfig-checker",
+    "checkvalidate": "editorconfig-checker && node-w3c-validator -i ./dist/*.html -f html -o ./reports/result.html -s"
   },
   "dependencies": {},
   "devDependencies": {
