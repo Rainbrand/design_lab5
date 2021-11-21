@@ -6,9 +6,15 @@
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "test": "editorconfig-checker",
+    "checkvalidate": "editorconfig-checker && node-w3c-validator -i ./src/*.html -f html -o ./reports/result.html -s",
+    "serve": "serve"
   },
-  "dependencies": {},
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "serve": "^13.0.2"
+  },
   "devDependencies": {
     "bulma": "^0.9.3",
     "clean-webpack-plugin": "^4.0.0",

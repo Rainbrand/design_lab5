@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - develop
+      - main
 
 jobs:
   build:
@@ -21,9 +22,10 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: ${{ matrix.java-version }}
-      - run: npm i -G node-w3c-validator
-      - run: npm ci
-      - run: npm run checkvalidate
+      - run: yarn global add node-w3c-validator
+      - run: yarn install --frozen-lockfile
+      - run: yarn checkvalidate
+      - run: yarn build
       # Deploy
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:

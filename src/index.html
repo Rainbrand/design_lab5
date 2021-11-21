@@ -10,224 +10,302 @@
 </head>
 <body>
 <header>
-    <div class="column is-10 is-offset-1">
+    <div class="column is-10 is-offset-1 py-0">
         <nav class="navbar">
             <div class="navbar-brand">
-                <a class="navbar-item" href="/">
+                <a class="navbar-item is-size-6 has-text-weight-bold is-family-primary px-0" href="/">
                     NewsExplorer
                 </a>
                 <a role="button" class="navbar-burger !is-active" data-target="navbar-components">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
+                    <span class="has-text-weight-bold" aria-hidden="true"></span>
+                    <span class="has-text-weight-bold" aria-hidden="true"></span>
+                    <span class="has-text-weight-bold" aria-hidden="true"></span>
                 </a>
             </div>
             <div id="navbar-components" class="navbar-menu">
                 <div class="navbar-end">
-                    <a href="#" class="navbar-item">
+                    <a href="#" class="family-secondary navbar-item is-bottom-hover-bordered">
                         Главная
                     </a>
-                    <a href="#" class="navbar-item">
+                    <a href="#" class="family-secondary navbar-item is-bottom-hover-bordered">
                         Сохраненные статьи
                     </a>
-                    <a href="#" class="navbar-item">
-                        Грета
-                        <i class="fas fa-sign-out-alt"></i>
+                    <a href="#" class="family-secondary navbar-item">
+                        <span class="py-3 px-4 navbar-login">
+                            Грета
+                            <i class="fas fa-sign-out-alt"></i>
+                        </span>
                     </a>
                 </div>
             </div>
         </nav>
     </div>
 </header>
-<main class="page">
-    <section class="hero column is-10 is-offset-1">
+<div class="page">
+    <section class="hero column is-6 is-offset-1">
         <div class="hero-body">
-            <p class="subtitle">
+            <p class="subtitle is-6 is-size-7 is-size-6-desktop has-text-grey-light is-family-secondary">
                 Сохраненные статьи
             </p>
-            <h1 class="title">Грета, у вас 5 сохраненных статей</h1>
-            <div class="subtitle">
+            <h4 class="title is-3 has-text-weight-normal is-size-2-desktop is-size-3 my-4">Грета, у вас 5 сохраненных статей</h4>
+            <div class="subtitle is-5 is-size-6 is-family-secondary mt-4">
                 По ключевым словам:
-                <span>
-                    Природа
+                <span class="has-text-weight-bold">
+                    Природа,
                 </span>
-                ,
-                <span>
-                    Тайга
+                <span class="has-text-weight-bold">
+                    Тайга и
                 </span>
-                и
-                <span>
+                <span class="has-text-weight-bold">
                     2-м другим
                 </span>
             </div>
         </div>
     </section>
-    <section class="articles column is-10 is-offset-1">
-        <div class="articles__container">
-            <div class="card">
-                <div class="card-header">
-                          <span class="articleCard__category">
-                              Природа
-                          </span>
-                    <span class="articleCard__removeIcon">
-                              <i class="far fa-trash-alt"></i>
-                          </span>
-                </div>
-                <img class="card-image" src="https://source.unsplash.com/YdAqiUkUoWA/400x272" alt="Image">
-                <div class="card-content">
-                    <div class="articleCard__date">
-                        2 августа, 2019
-                    </div>
-                    <div class="articleCard__header">
-                        Национальное достояние - парки
-                    </div>
-                    <div class="articleCard__paragraph">
-                        В 2016 году Америка отмечала важный юбилей:
-                        сто лет назад здесь начала складываться система
-                        национальных парков – охраняемых территорий,
-                        где и сегодня каждый может приобщиться к природе.
-                    </div>
-                    <div class="articleCard__source">
-                        Дзен
-                    </div>
-                </div>
-            </div>
-            <div class="articleCard">
-                <div class="articleCard__meta">
-                          <span class="articleCard__category">
-                              Природа
-                          </span>
-                    <span class="articleCard__removeIcon">
-                              <i class="far fa-trash-alt"></i>
-                          </span>
-                </div>
-                <img class="articleCard__image" src="https://source.unsplash.com/5LxaPqywLwQ/400x272" alt="Image">
-                <div class="articleCard__text">
-                    <div class="articleCard__date">
-                        2 августа, 2019
-                    </div>
-                    <div class="articleCard__header">
-                        Лесные огоньки: история одной фотографии
-                    </div>
-                    <div class="articleCard__paragraph">
-                        Фотограф отвлеклась от освещения суровой политической
-                        реальности Мексики, чтобы запечатлеть ускользающую красоту одного
-                        из местных чудес природы.
-                    </div>
-                    <div class="articleCard__source">
-                        Афиша
+    <section class="articles columns has-background-light">
+        <div class="column is-10 is-offset-1 is-multiline">
+            <div class="columns is-multiline is-variable is-2-tablet is-2-desktop is-4-mobile">
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-header p-2 is-max is-flex is-justify-content-space-between is-align-items-center">
+                            <span class="category px-3 py-2 has-family-secondary is-size-7 has-background-white">
+                                Природа
+                            </span>
+                            <span class="remove-from-saved-icon trash-icon py-1 px-2 is-clickable has-background-white">
+                                <i class="far fa-trash-alt"></i>
+                            </span>
+                        </div>
+                        <div class="card-image">
+                            <figure class="image is-3by2">
+                                <img src="https://source.unsplash.com/YdAqiUkUoWA/400x272" alt="Image">
+                            </figure>
+                        </div>
+                        <div class="card-content p-4">
+                            <div class="is-size-6 has-text-grey-light is-family-secondary has-text-weight-light mb-3">
+                                2 августа, 2019
+                            </div>
+                            <div class="title is-size-3-desktop is-4 has-text-weight-normal is-family-primary mb-3">
+                                Национальное достояние - парки
+                            </div>
+                            <div class="is-family-secondary mb-2 paragraph-truncate-wrapper">
+                                <p>
+                                    В 2016 году Америка отмечала важный юбилей:
+                                    сто лет назад здесь начала складываться система
+                                    национальных парков – охраняемых территорий,
+                                    где и сегодня каждый может приобщиться к природе.
+                                </p>
+                            </div>
+                            <div class="is-family-primary has-text-grey-light has-text-weight-bold">
+                                Дзен
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="articleCard">
-                <div class="articleCard__meta">
-                          <span class="articleCard__category">
-                              Тайга
-                          </span>
-                    <span class="articleCard__removeIcon">
-                              <i class="far fa-trash-alt"></i>
-                          </span>
-                </div>
-                <img class="articleCard__image" src="https://source.unsplash.com/bYLHitxMHmU/400x272" alt="Image">
-                <div class="articleCard__text">
-                    <div class="articleCard__date">
-                        2 августа, 2019
-                    </div>
-                    <div class="articleCard__header">
-                        «Первозданная тайга»: новый фотопроект Игоря Шпиленка
-                    </div>
-                    <div class="articleCard__paragraph">
-                        Знаменитый фотограф снимает первозданные леса России, чтобы рассказать
-                        о необходимости их сохранения.
-                        В этот раз он отправился в Двинско-Пинежскую тайгу, где...
-                    </div>
-                    <div class="articleCard__source">
-                        Медиазона
-                    </div>
-                </div>
-            </div>
-            <div class="articleCard">
-                <div class="articleCard__meta">
-                          <span class="articleCard__category">
-                              Парки
-                          </span>
-                    <span class="articleCard__removeIcon">
-                              <i class="far fa-trash-alt"></i>
-                          </span>
-                </div>
-                <img class="articleCard__image" src="https://source.unsplash.com/YdAqiUkUoWA/400x272" alt="Image">
-                <div class="articleCard__text">
-                    <div class="articleCard__date">
-                        2 августа, 2019
-                    </div>
-                    <div class="articleCard__header">
-                        Национальное достояние - парки
-                    </div>
-                    <div class="articleCard__paragraph">
-                        В 2016 году Америка отмечала важный юбилей:
-                        сто лет назад здесь начала складываться система
-                        национальных парков – охраняемых территорий,
-                        где и сегодня каждый может приобщиться к природе.
-                    </div>
-                    <div class="articleCard__source">
-                        Дзен
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-header p-2 is-max is-flex is-justify-content-space-between is-align-items-center">
+                            <span class="category px-3 py-2 has-family-secondary is-size-7 has-background-white">
+                                Природа
+                            </span>
+                            <span class="remove-from-saved-icon trash-icon py-1 px-2 is-clickable has-background-white">
+                                <i class="far fa-trash-alt"></i>
+                            </span>
+                        </div>
+                        <div class="card-image">
+                            <figure class="image is-3by2">
+                                <img src="https://source.unsplash.com/YdAqiUkUoWA/400x272" alt="Image">
+                            </figure>
+                        </div>
+                        <div class="card-content p-4">
+                            <div class="is-size-6 has-text-grey-light is-family-secondary has-text-weight-light mb-3">
+                                2 августа, 2019
+                            </div>
+                            <div class="title is-size-3-desktop is-4 has-text-weight-normal is-family-primary mb-3">
+                                Национальное достояние - парки
+                            </div>
+                            <div class="is-family-secondary mb-2 paragraph-truncate-wrapper">
+                                <p>
+                                    В 2016 году Америка отмечала важный юбилей:
+                                    сто лет назад здесь начала складываться система
+                                    национальных парков – охраняемых территорий,
+                                    где и сегодня каждый может приобщиться к природе.
+                                </p>
+                            </div>
+                            <div class="is-family-primary has-text-grey-light has-text-weight-bold">
+                                Дзен
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="articleCard">
-                <div class="articleCard__meta">
-                          <span class="articleCard__category">
-                              Фотография
-                          </span>
-                    <span class="articleCard__removeButton">
-                              Убрать из сохраненных
-                          </span>
-                    <span class="articleCard__removeIcon">
-                              <i class="far fa-trash-alt"></i>
-                          </span>
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-header p-2 is-max is-flex is-justify-content-space-between is-align-items-center">
+                            <span class="category px-3 py-2 has-family-secondary is-size-7 has-background-white">
+                                Природа
+                            </span>
+                            <span class="remove-from-saved-icon trash-icon py-1 px-2 is-clickable has-background-white">
+                                <i class="far fa-trash-alt"></i>
+                            </span>
+                        </div>
+                        <div class="card-image">
+                            <figure class="image is-3by2">
+                                <img src="https://source.unsplash.com/YdAqiUkUoWA/400x272" alt="Image">
+                            </figure>
+                        </div>
+                        <div class="card-content p-4">
+                            <div class="is-size-6 has-text-grey-light is-family-secondary has-text-weight-light mb-3">
+                                2 августа, 2019
+                            </div>
+                            <div class="title is-size-3-desktop is-4 has-text-weight-normal is-family-primary mb-3">
+                                Национальное достояние - парки
+                            </div>
+                            <div class="is-family-secondary mb-2 paragraph-truncate-wrapper">
+                                <p>
+                                    В 2016 году Америка отмечала важный юбилей:
+                                    сто лет назад здесь начала складываться система
+                                    национальных парков – охраняемых территорий,
+                                    где и сегодня каждый может приобщиться к природе.
+                                </p>
+                            </div>
+                            <div class="is-family-primary has-text-grey-light has-text-weight-bold">
+                                Дзен
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <img class="articleCard__image" src="https://source.unsplash.com/5LxaPqywLwQ/400x272" alt="Image">
-                <div class="articleCard__text">
-                    <div class="articleCard__date">
-                        2 августа, 2019
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-header p-2 is-max is-flex is-justify-content-space-between is-align-items-center">
+                            <span class="category px-3 py-2 has-family-secondary is-size-7 has-background-white">
+                                Природа
+                            </span>
+                            <span class="remove-from-saved-icon trash-icon py-1 px-2 is-clickable has-background-white">
+                                <i class="far fa-trash-alt"></i>
+                            </span>
+                        </div>
+                        <div class="card-image">
+                            <figure class="image is-3by2">
+                                <img src="https://source.unsplash.com/YdAqiUkUoWA/400x272" alt="Image">
+                            </figure>
+                        </div>
+                        <div class="card-content p-4">
+                            <div class="is-size-6 has-text-grey-light is-family-secondary has-text-weight-light mb-3">
+                                2 августа, 2019
+                            </div>
+                            <div class="title is-size-3-desktop is-4 has-text-weight-normal is-family-primary mb-3">
+                                Национальное достояние - парки
+                            </div>
+                            <div class="is-family-secondary mb-2 paragraph-truncate-wrapper">
+                                <p>
+                                    В 2016 году Америка отмечала важный юбилей:
+                                    сто лет назад здесь начала складываться система
+                                    национальных парков – охраняемых территорий,
+                                    где и сегодня каждый может приобщиться к природе.
+                                </p>
+                            </div>
+                            <div class="is-family-primary has-text-grey-light has-text-weight-bold">
+                                Дзен
+                            </div>
+                        </div>
                     </div>
-                    <div class="articleCard__header">
-                        Лесные огоньки: история одной фотографии
+                </div>
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-header p-2 is-max is-flex is-justify-content-space-between is-align-items-center">
+                            <span class="category px-3 py-2 has-family-secondary is-size-7 has-background-white">
+                                Природа
+                            </span>
+                            <span class="remove-from-saved-icon trash-icon py-1 px-2 is-clickable has-background-white">
+                                <i class="far fa-trash-alt"></i>
+                            </span>
+                        </div>
+                        <div class="card-image">
+                            <figure class="image is-3by2">
+                                <img src="https://source.unsplash.com/YdAqiUkUoWA/400x272" alt="Image">
+                            </figure>
+                        </div>
+                        <div class="card-content p-4">
+                            <div class="is-size-6 has-text-grey-light is-family-secondary has-text-weight-light mb-3">
+                                2 августа, 2019
+                            </div>
+                            <div class="title is-size-3-desktop is-4 has-text-weight-normal is-family-primary mb-3">
+                                Национальное достояние - парки
+                            </div>
+                            <div class="is-family-secondary mb-2 paragraph-truncate-wrapper">
+                                <p>
+                                    В 2016 году Америка отмечала важный юбилей:
+                                    сто лет назад здесь начала складываться система
+                                    национальных парков – охраняемых территорий,
+                                    где и сегодня каждый может приобщиться к природе.
+                                </p>
+                            </div>
+                            <div class="is-family-primary has-text-grey-light has-text-weight-bold">
+                                Дзен
+                            </div>
+                        </div>
                     </div>
-                    <div class="articleCard__paragraph">
-                        Фотограф отвлеклась от освещения суровой политической
-                        реальности Мексики, чтобы запечатлеть ускользающую красоту одного
-                        из местных чудес природы.
-                    </div>
-                    <div class="articleCard__source">
-                        Афиша
+                </div>
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-header p-2 is-max is-flex is-justify-content-space-between is-align-items-center">
+                            <span class="category px-3 py-2 has-family-secondary is-size-7 has-background-white">
+                                Природа
+                            </span>
+                            <span class="remove-from-saved-icon trash-icon py-1 px-2 is-clickable has-background-white">
+                                <i class="far fa-trash-alt"></i>
+                            </span>
+                        </div>
+                        <div class="card-image">
+                            <figure class="image is-3by2">
+                                <img src="https://source.unsplash.com/YdAqiUkUoWA/400x272" alt="Image">
+                            </figure>
+                        </div>
+                        <div class="card-content p-4">
+                            <div class="is-size-6 has-text-grey-light is-family-secondary has-text-weight-light mb-3">
+                                2 августа, 2019
+                            </div>
+                            <div class="title is-size-3-desktop is-4 has-text-weight-normal is-family-primary mb-3">
+                                Национальное достояние - парки
+                            </div>
+                            <div class="is-family-secondary mb-2 paragraph-truncate-wrapper">
+                                <p>
+                                    В 2016 году Америка отмечала важный юбилей:
+                                    сто лет назад здесь начала складываться система
+                                    национальных парков – охраняемых территорий,
+                                    где и сегодня каждый может приобщиться к природе.
+                                </p>
+                            </div>
+                            <div class="is-family-primary has-text-grey-light has-text-weight-bold">
+                                Дзен
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-</main>
-<footer class="footer">
-    <div class="footer__container">
-        <div class="footer__copyright">
+</div>
+<footer class="footer mt-3">
+    <div class="column is-10 is-offset-1 content is-flex is-columns-reversed is-justify-content-space-between is-align-items-center">
+        <div class="column is-family-secondary has-text-grey-light">
             © 2020 Supersite, Powered by News API
         </div>
-        <div class="footer__links">
-            <div class="footer__linksTextContainer">
-                      <span class="footer__linksTextItem">
-                          Главная
-                      </span>
-                <span class="footer__linksTextItem">
-                          Яндекс.Практикум
-                      </span>
+        <div class="column is-narrow is-mobile is-flex is-justify-content-space-between is-align-items-center">
+            <div class="column is-narrow">
+                <span>
+                    Главная
+                </span>
+                <span>
+                    Яндекс.Практикум
+                </span>
             </div>
-            <div class="footer__linksIconContainer">
-                      <span class="footer__linkIcon">
-                          <i class="fab fa-github"></i>
-                      </span>
-                <span class="footer__linkIcon">
-                          <i class="fab fa-facebook-square"></i>
-                      </span>
+            <div class="column is-narrow is-flex has-text-right is-justify-content-flex-end">
+                <span class="mr-5">
+                    <i class="fab fa-github"></i>
+                </span>
+                <span>
+                    <i class="fab fa-facebook-square"></i>
+                </span>
             </div>
         </div>
     </div>
