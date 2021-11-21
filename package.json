@@ -8,7 +8,7 @@
     "dev": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
     "test": "editorconfig-checker",
-    "checkvalidate": "editorconfig-checker && node-w3c-validator -i ./dist/*.html -f html -o ./reports/result.html -s",
+    "checkvalidate": "editorconfig-checker && node-w3c-validator -i ./src/*.html -f html -o ./reports/result.html -s",
     "serve": "serve"
   },
   "dependencies": {
